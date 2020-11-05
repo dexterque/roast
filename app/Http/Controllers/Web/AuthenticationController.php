@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
 
 use App\Models\User;
@@ -15,7 +15,7 @@ class AuthenticationController extends Controller
         try {
             return Socialite::with($account)->redirect();
         } catch (\InvalidArgumentException $exception) {
-            return redirect("login");
+            return redirect("/login");
         }
     }
 
@@ -36,7 +36,6 @@ class AuthenticationController extends Controller
             $user = $newUser;
         }
         Auth::login($user);
-
-        return redirect("/");
+        return redirect('/');
     }
 }

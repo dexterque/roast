@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\AuthenticationController;
-use App\Http\Controllers\TestController;
 use App\Http\Controllers\Web\AppController;
+use App\Http\Web\Controllers\AuthenticationController;
 use Illuminate\Support\Facades\Route;
 
 /*

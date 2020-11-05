@@ -9,7 +9,6 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <title>Roast</title>
-
     <script type='text/javascript'>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
