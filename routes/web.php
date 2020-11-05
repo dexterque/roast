@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Web\AppController;
-use App\Http\Web\Controllers\AuthenticationController;
+use App\Http\Controllers\Web\AuthenticationController;
 use Illuminate\Support\Facades\Route;
 
 /*
