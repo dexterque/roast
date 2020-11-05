@@ -22,7 +22,9 @@ class AuthenticationController extends Controller
 
     public function getSocialCallback($account, User $newUser)
     {
-        $socialUser = Socialite::with($account)->user();
+        $socialUser = Socialite::with($account)
+            ->setHttpClient(new \GuzzleHttp\Client(['verify' => false]))
+            ->user();
         $user = User::where("provider_id", $socialUser->id)
             ->where("provider", $account)
             ->first();
